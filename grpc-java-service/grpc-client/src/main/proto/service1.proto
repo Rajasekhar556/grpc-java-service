@@ -1,0 +1,16 @@
+syntax = "proto3"; // syntax identifier for protobuff compiler to create its own stub classes. only proto2, proto3 are valid
+
+option java_multiple_files = true;
+option java_package = "com.org.grpc.grpcjavaservice";
+
+service MessageService{ //this acts like a controller where we define our exact services
+  rpc sayHello(Request) returns (Response) ;
+}
+
+message Request { // request payload
+  string firstName = 1;
+}
+
+message Response { // response payload
+  string greeting = 1;
+}
