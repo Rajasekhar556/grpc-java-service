@@ -3,3 +3,4 @@
 3. Always a base class will be created by protobuff compiler can be used to implement our service.
 4. The service needs to be annotated with @Grpcservice.
 5. To test the created service we can test by sending request from postman. From version 9.7.1 postman supports to send gRPC requests.
+6. The best practise is to declare each service in a separate .proto files because the classs files will be created separately for each service.
